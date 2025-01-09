@@ -1,0 +1,122 @@
+/* Переменные для цветов и стилей */
+@primary-bg: #333;
+@secondary-bg: #f4f4f4;
+@text-color-light: #fff;
+@text-color-dark: #333;
+@border-color: #ccc;
+@box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: @primary-bg;
+    color: @text-color-light;
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .search {
+        input {
+            padding: 5px;
+            font-size: 16px;
+        }
+    }
+
+    .cart {
+        button {
+            padding: 5px 15px;
+            font-size: 16px;
+            background-color: @text-color-light;
+            color: @primary-bg;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    }
+}
+
+.container {
+    display: flex;
+
+    .sidebar {
+        width: 200px;
+        background-color: @secondary-bg;
+        padding: 20px;
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-bottom: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: @text-color-dark;
+                }
+            }
+        }
+    }
+
+    .catalog {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        flex: 1;
+
+        .product-card {
+            background-color: @text-color-light;
+            border: 1px solid @border-color;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: @box-shadow;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-bottom: 1px solid @border-color;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+
+            p {
+                font-size: 16px;
+                color: @text-color-dark;
+                margin: 5px 0;
+            }
+
+            button {
+                padding: 5px 10px;
+                font-size: 16px;
+                background-color: @primary-bg;
+                color: @text-color-light;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+        }
+    }
+}
